@@ -4,3 +4,9 @@
 export function squish(input) {
   return String(input).replace(/\s+/g, " ").trim();
 }
+
+/** Count whitespace-separated words, ignoring surrounding whitespace. */
+export function countWords(text) {
+  const trimmed = text.trim();
+  return trimmed === "" ? 0 : trimmed.split(/\s+/).length;
+}

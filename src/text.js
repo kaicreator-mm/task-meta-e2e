@@ -4,3 +4,8 @@
 export function squish(input) {
   return String(input).replace(/\s+/g, " ").trim();
 }
+
+/** Reverse whitespace-separated words, joined by single spaces. */
+export function reverseWords(text) {
+  return squish(text).split(" ").reverse().join(" ");
+}

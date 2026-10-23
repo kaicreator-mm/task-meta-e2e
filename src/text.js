@@ -4,3 +4,11 @@
 export function squish(input) {
   return String(input).replace(/\s+/g, " ").trim();
 }
+
+/** Lowercase; keep ASCII letters/digits, collapse every other run into a single hyphen. */
+export function slugify(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}

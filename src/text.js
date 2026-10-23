@@ -4,3 +4,8 @@
 export function squish(input) {
   return String(input).replace(/\s+/g, " ").trim();
 }
+
+/** Upper-case the first character and leave the rest unchanged. */
+export function capitalize(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
